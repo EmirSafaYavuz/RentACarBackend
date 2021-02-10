@@ -1,4 +1,5 @@
 ﻿using Entities.Concrete;
+using Entities.DTOs;
 using System;
 using System.Collections.Generic;
 using System.Text;
@@ -12,9 +13,11 @@ namespace Business.Abstract
         void Delete(Car car);
         List<Car> GetAll();
         Car GetById(int id);
+        List<CarDetailDto> GetCarDetails();
         List<Car> GetAllByColorId(int id);
         List<Car> GetAllByBrandId(int id);
         List<Car> GetByDailyPrice(decimal min, decimal max);
         List<Car> GetByModelYear(string year);
+
     }
 }
