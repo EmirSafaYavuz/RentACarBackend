@@ -6,6 +6,7 @@ using Entities.Concrete;
 using Entities.DTOs;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Text;
 
 namespace Business.Concrete
@@ -27,7 +28,12 @@ namespace Business.Concrete
 
         public IResult CheckReturnDate(int carId)
         {
-            throw new NotImplementedException();
+            var result = _rentalDal.GetRentalDetails(x => x.CarId == carId);
+            if (result.Count > 0 && result.Count(x => x.ReturnDate == null) > 0)
+            {
+                return new ErrorResult();
+            }
+            return new SuccessResult();
         }
 
         public IDataResult<List<Rental>> GetAll()
@@ -42,7 +48,15 @@ namespace Business.Concrete
 
         public IResult UpdateReturnDate(int carId)
         {
-            
+            var result = _rentalDal.GetAll(x => x.CarId == carId);
+            var updatedRental = result.LastOrDefault();
+            if (updatedRental.ReturnDate != null)
+            {
+                return new ErrorResult();
+            }
+            updatedRental.ReturnDate = DateTime.Now;
+            _rentalDal.Update(updatedRental);
+            return new SuccessResult();
         }
     }
 }

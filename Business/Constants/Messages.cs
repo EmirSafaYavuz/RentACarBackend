@@ -30,6 +30,9 @@ namespace Business.Constants
         public static string UserDeleted = "Kullanıcı Silindi";
         public static string UserUpdated = "Kullanıcı Güncellendi";
 
+        //Customers
+        public static string CustomerAdded = "Müşteri Eklendi";
+
         //Invalids
         public static string PriceInvalid = "Geçersiz Fiyat";
         public static string BrandNameInvalid = "Marka İsmi Geçersiz";
