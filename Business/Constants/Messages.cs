@@ -24,6 +24,9 @@ namespace Business.Constants
 
         //Rental
         public static string RentalAdded = "Kiralama İşlemi Başarılı";
+        public static string RentalDeleted = "Kiralama İşlemi Silindi";
+        public static string RentalUpdated = "Kiralama İşlemi Güncellendi";
+
 
         //Users
         public static string UserAdded = "Kullanıcı Eklendi";
