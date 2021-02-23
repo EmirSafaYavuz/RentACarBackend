@@ -39,6 +39,10 @@ namespace Business.Constants
         //Invalids
         public static string PriceInvalid = "Geçersiz Fiyat";
         public static string BrandNameInvalid = "Marka İsmi Geçersiz";
+        public static string BrandNameLengthInvalid = "Marka İsmi En Az İki Harften Oluşmalıdır";
+        public static string ColorNameLengthInvalid = "Renk Adı En Az İki Harften Oluşmalıdır";
+        public static string CompanyNameLengthInvalid = "Şirket Adı En Az İki Harften Oluşmalıdır";
+        public static string UserNameLengthInvalid = "Kullanıcı İsmi En Az Dört Harften Oluşmalıdır";
         
     }
 }
