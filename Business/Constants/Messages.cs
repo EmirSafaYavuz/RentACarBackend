@@ -16,8 +16,13 @@ namespace Business.Constants
         public static string BrandAdded = "Marka Eklendi";
         public static string BrandDeleted = "Marka Silindi";
         public static string BrandUpdated = "Marka Güncellendi";
-        
-        //Cars
+
+        //CarImages
+        public static string CarImageAdded = "Araç Resmi Eklendi";
+        public static string CarImageDeleted = "Araç Resmi Silindi";
+        public static string CarImageUpdated = "Araç Resmi Güncellendi";
+         
+        //Colors
         public static string ColorAdded = "Renk Eklendi";
         public static string ColorDeleted = "Renk Silindi";
         public static string ColorUpdated = "Renk Güncellendi";
