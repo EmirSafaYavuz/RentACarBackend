@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.Serialization;
 using System.Text;
 
 namespace Business.Constants
@@ -48,6 +49,13 @@ namespace Business.Constants
         public static string ColorNameLengthInvalid = "Renk Adı En Az İki Harften Oluşmalıdır";
         public static string CompanyNameLengthInvalid = "Şirket Adı En Az İki Harften Oluşmalıdır";
         public static string UserNameLengthInvalid = "Kullanıcı İsmi En Az Dört Harften Oluşmalıdır";
-        
+
+        public static string AuthorizationDenied = "Erişim Reddedildi";
+        public static string UserRegistered = "Kullanıcı Kaydedildi";
+        public static string UserNotFound = "Kullanıcı Bulunamadı";
+        public static string PasswordError = "Parola Hatası";
+        public static string SuccessfulLogin = "Giriş Başarılı";
+        public static string UserAlreadyExists = "Kullanıcı Zaten Mevcut";
+        public static string AccessTokenCreated = "Access Token Oluşturuldu";
     }
 }

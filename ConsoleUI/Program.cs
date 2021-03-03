@@ -43,7 +43,7 @@ namespace ConsoleUI
             foreach (var user in userManager.GetAll().Data)
             {
                 Console.WriteLine(user.Id + " - " + user.FirstName + " " + user.LastName);
-                Console.WriteLine(user.Email + " " + user.Password);
+                //Console.WriteLine(user.Email + " " + user.Password);
             }
             Console.WriteLine("----------");
 
