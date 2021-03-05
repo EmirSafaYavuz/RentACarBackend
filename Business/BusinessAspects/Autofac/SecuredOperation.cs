@@ -1,5 +1,5 @@
-﻿using Core.Utilites.Interceptors;
-using Core.Utilites.IoC;
+﻿using Core.Utilities.Interceptors;
+using Core.Utilities.IoC;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;

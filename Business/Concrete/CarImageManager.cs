@@ -2,8 +2,7 @@
 using Business.Constants;
 using Business.ValidationRules.FluentValidation;
 using Core.Aspects.Autofac.Validation;
-using Core.Utilites.FileHelper;
-using Core.Utilites.Results;
+using Core.Utilities.Results;
 using Core.Utilities.Business;
 using DataAccess.Abstract;
 using Entities.Concrete;
@@ -13,6 +12,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using Core.Utilities.FileHelper;
 
 namespace Business.Concrete
 {

@@ -1,11 +1,12 @@
-﻿using Core.Utilites.Results;
+﻿using Core.Utilities.Results;
 using Microsoft.AspNetCore.Http;
 using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Text;
+using System.Threading.Tasks;
 
-namespace Core.Utilites.FileHelper
+namespace Core.Utilities.FileHelper
 {
     public class FileHelper
     {
@@ -88,5 +89,8 @@ namespace Core.Utilites.FileHelper
 
             return (result, $"\\Images\\{creatingUniqueFilename}");
         }
+
+
+
     }
 }

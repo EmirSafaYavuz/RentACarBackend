@@ -7,7 +7,7 @@ using Business.Abstract;
 using DataAccess.Concrete.EntityFramework;
 using DataAccess.Abstract;
 using Castle.DynamicProxy;
-using Core.Utilites.Interceptors;
+using Core.Utilities.Interceptors;
 using Autofac.Extras.DynamicProxy;
 using Core.Utilities.Security.JWT;
 
