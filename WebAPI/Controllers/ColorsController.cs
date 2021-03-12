@@ -68,7 +68,7 @@ namespace WebAPI.Controllers
             var result = _colorService.GetAll();
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
             else
             {
