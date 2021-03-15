@@ -42,11 +42,6 @@ namespace Business.Constants
         //Customers
         public static string CustomerAdded = "Müşteri Eklendi";
 
-        //Categories
-        public static string CategoryAdded = "Kategori Eklendi";
-        public static string CategoryDeleted = "Kategori Silindi";
-        public static string CategoryUpdated = "Kategori Güncellendi";
-
         //Invalids
         public static string PriceInvalid = "Geçersiz Fiyat";
         public static string BrandNameInvalid = "Marka İsmi Geçersiz";
