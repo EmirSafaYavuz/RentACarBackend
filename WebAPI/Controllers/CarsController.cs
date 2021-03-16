@@ -96,6 +96,21 @@ namespace WebAPI.Controllers
             var result = _carService.GetCarDetails();
             if (result.Success)
             {
+                //ANDROID -> result.Data
+                return Ok(result.Data);
+            }
+            else
+            {
+                return BadRequest(result.Message);
+            }
+        }
+
+        [HttpGet("getcardetailsbyid")]
+        public IActionResult GetCarDetails(int id)
+        {
+            var result = _carService.GetCarDetailsById(id);
+            if (result.Success)
+            {
                 return Ok(result);
             }
             else
@@ -110,7 +125,7 @@ namespace WebAPI.Controllers
             var result = _carService.GetAllByColorId(id);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
             else
             {
@@ -124,7 +139,7 @@ namespace WebAPI.Controllers
             var result = _carService.GetAllByBrandId(id);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
             else
             {
@@ -138,7 +153,7 @@ namespace WebAPI.Controllers
             var result = _carService.GetByDailyPrice(min, max);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
             else
             {
@@ -152,7 +167,7 @@ namespace WebAPI.Controllers
             var result = _carService.GetByModelYear(year);
             if (result.Success)
             {
-                return Ok(result.Data);
+                return Ok(result);
             }
             else
             {

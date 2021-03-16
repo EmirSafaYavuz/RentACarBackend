@@ -41,14 +41,14 @@ namespace Business.Concrete
             return new SuccessDataResult<List<Car>>(_carDal.GetAll(),Messages.CarsListed);
         }
 
-        public IDataResult<List<Car>> GetAllByBrandId(int id)
+        public IDataResult<List<CarDetailDto>> GetAllByBrandId(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.BrandId == id));
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.BrandId == id));
         }
 
-        public IDataResult<List<Car>> GetAllByColorId(int id)
+        public IDataResult<List<CarDetailDto>> GetAllByColorId(int id)
         {
-            return new SuccessDataResult<List<Car>>(_carDal.GetAll(c => c.ColorId == id));
+            return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails(c => c.ColorId == id));
         }
 
         public IDataResult<List<Car>> GetByDailyPrice(decimal min, decimal max)
@@ -70,6 +70,11 @@ namespace Business.Concrete
         public IDataResult<List<CarDetailDto>> GetCarDetails()
         {
             return new SuccessDataResult<List<CarDetailDto>>(_carDal.GetCarDetails());
+        }
+
+        public IDataResult<List<CarDetailDto>> GetCarDetailsById(int id)
+        {
+            throw new NotImplementedException();
         }
 
         public IResult Update(Car car)
