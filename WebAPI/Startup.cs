@@ -12,16 +12,17 @@ using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
-using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.AspNetCore.Cors;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
 
 namespace WebAPI
 {
@@ -39,7 +40,7 @@ namespace WebAPI
         {
             services.AddControllers();
 
-            //services.AddCors();
+            services.AddCors();
 
             //services.AddCors(o => o.AddPolicy("MyPolicy", builder =>
             //{
@@ -47,11 +48,6 @@ namespace WebAPI
             //           .AllowAnyMethod()
             //           .AllowAnyHeader();
             //}));
-
-            //services.Configure<MvcOptions>(options =>
-            //{
-            //    options.Filters.Add(new CorsAuthorizationFilterFactory("MyPolicy"));
-            //});
 
             var tokenOptions = Configuration.GetSection("TokenOptions").Get<TokenOptions>();
 
@@ -82,9 +78,9 @@ namespace WebAPI
                 app.UseDeveloperExceptionPage();
             }
 
-            //app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
+            app.UseCors(builder=>builder.WithOrigins("http://localhost:4200").AllowAnyHeader());
 
-            app.UseCors("MyPolicy");
+            //app.UseCors("MyPolicy");
 
             app.UseHttpsRedirection();
 

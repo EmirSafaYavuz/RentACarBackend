@@ -97,7 +97,7 @@ namespace WebAPI.Controllers
             if (result.Success)
             {
                 //ANDROID -> result.Data
-                return Ok(result.Data);
+                return Ok(result);
             }
             else
             {
